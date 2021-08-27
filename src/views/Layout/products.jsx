@@ -4,7 +4,7 @@ import { Card, Table, Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 
 
-function Sales(){
+function Products(){
 
     const dataSource = [
         {
@@ -53,7 +53,7 @@ function Sales(){
 
     return (
 
-        <Card title="Vendas e Orçamentos">
+        <Card title="Produtos">
             <Button type="primary" icon={<PlusOutlined />}>Novo Pedido</Button>
             <Table dataSource={dataSource} columns={columns} />
 
@@ -62,4 +62,4 @@ function Sales(){
     )
 }
 
-export default Sales;
+export default Products;

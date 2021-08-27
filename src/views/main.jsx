@@ -7,7 +7,9 @@ import 'antd/dist/antd.css';
 import '../views/main.css'
 
 import Dashboard from "./dashboard";
-import Sales from "./Layout/sales"
+import Sales from "./Layout/sales";
+import Products from "./Layout/products";
+
 import HeaderTop from '../components/header';
 
 const { Header, Content, Sider, Footer } = Layout;
@@ -17,17 +19,25 @@ function Main(){
 
     const routes = [
         {
-          path: "/manager/painel",
+          path: "/",
           exact: true,
           main: () => <Dashboard/>
         },
         {
-          path: "/manager/sales",
-          main: () => <h2><Sales/></h2>
+          path: "/vendas-e-orcamentos",
+          main: () => <Sales/>
         },
         {
-          path: "/manager/shoelaces",
-          main: () => <h2>Shoelaces</h2>
+          path: "/notas-fiscais",
+          main: () => <h2>Notas</h2>
+        },
+        {
+          path: "/produtos",
+          main: () => <Products />
+        },
+        {
+          path: "/categorias",
+          main: () => <h2>Categorias</h2>
         }
       ];
 
@@ -42,43 +52,53 @@ function Main(){
         <Router>
 
         <Layout>
-        <Sider width={300} className="site-layout-background">
+        <Sider width={180} className="site-layout-background">
           <Menu
             style={{ float: "left" }}
             defaultSelectedKeys={['1']}
             defaultOpenKeys={['sub1', 'sub2']}
             mode="inline"
           >
-              <Menu.ItemGroup key="g1" title="Painel">
-                <Menu.Item key="1">
-                  <Link to="/manager/painel">Visão Geral</Link>
-                </Menu.Item>
-                <Menu.Item key="2">
-                  <Link to="/manager/sales">Vendas e Orçamentos</Link>
-                </Menu.Item>
-              </Menu.ItemGroup>
+              <Menu.Item key="1">
+                  <Link to="/">Visão Geral</Link>
+              </Menu.Item>
 
-              <Menu.ItemGroup key="g2" title="Item 2">
-                <Menu.Item key="3">
-                  <Link to="/manager/shoelaces">Shoelaces</Link>
-                </Menu.Item>
-                <Menu.Item key="4">Option 4</Menu.Item>
-              </Menu.ItemGroup>
+              <SubMenu key="sub5" title="Pedidos">
+                  <Menu.Item key="0013">
+                    <Link to="/vendas-e-orcamentos">Vendas e Orçamentos</Link>
+                  </Menu.Item>
+                  <Menu.Item key="33333">
+                    <Link to="/notas-fiscais">Notas Fiscais</Link>
+                  </Menu.Item>
+                </SubMenu>
 
+                <SubMenu key="sub3" title="Catálogo">
+                  <Menu.Item key="001">
+                    <Link to="/produtos">Produtos</Link>
+                  </Menu.Item>
+                  <Menu.Item key="3">
+                    <Link to="/categorias">Categorias</Link>
+                  </Menu.Item>
+                </SubMenu>
 
-              <Menu.Item key="5">Option 5</Menu.Item>
-              <Menu.Item key="6">Option 6</Menu.Item>
-              <SubMenu key="sub3" title="Financeiro">
-                <Menu.Item key="7">Fluxo de Caixa</Menu.Item>
-                <Menu.Item key="8">Option 8</Menu.Item>
+                <SubMenu key="sub0444" title="Clientes">
+                  <Menu.Item key="74">
+                    <Link to="/clientes">Lista de Clientes</Link>
+                  </Menu.Item>
+                  <Menu.Item key="00402">Contas</Menu.Item>
+                </SubMenu>
+
                 <SubMenu key="sub0" title="Financeiro">
                   <Menu.Item key="7">Fluxo de Caixa</Menu.Item>
+                  <Menu.Item key="0002">Contas</Menu.Item>
                 </SubMenu>
-              </SubMenu>
-              <Menu.Item key="9">Option 9</Menu.Item>
-              <Menu.Item key="10">Option 10</Menu.Item>
-              <Menu.Item key="11">Option 11</Menu.Item>
-              <Menu.Item key="12">Option 12</Menu.Item>
+
+                <SubMenu key="sub0333" title="Configurações">
+                  <Menu.Item key="73233323">Geral</Menu.Item>
+                  <Menu.Item key="732323">Usuários</Menu.Item>
+                  <Menu.Item key="00323202">Vendedores</Menu.Item>
+                </SubMenu>
+
           </Menu>
           </Sider>
               
