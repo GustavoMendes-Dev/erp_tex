@@ -4,4 +4,32 @@
     z-index: 2;
     height: 55px;
     line-height: 55px;
+    background-color: #24292f;
+    padding: 0 20px;
+}
+
+.icon-Header {
+    float: right;
+    text-align: right;
+}
+
+.ant-input-search .ant-input-lg {
+    background: none;
+    color: #ffffff;
+    font-size: 13px;
+    border: 1px #bcbdbe solid;
+}
+.ant-input-search .ant-input:hover, .ant-input-search .ant-input:focus {
+    border: 1px #bcbdbe solid;
+}
+
+.ant-select.ant-select-auto-complete.ant-select-single.ant-select-customize-input.ant-select-show-search {
+    min-width: 70%;
+}
+
+.ant-col.searchTop {
+    line-height: 44px;
+    height: 55px;
+    padding: 0;
+    margin: 0;
 }
