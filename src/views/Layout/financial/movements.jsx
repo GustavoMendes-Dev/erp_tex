@@ -1,10 +1,9 @@
 import React from 'react';
 import { Card, Table, Button } from 'antd';
-// import { Button } from "react-bootstrap"
 import { PlusOutlined } from '@ant-design/icons';
 
 
-function Sales(){
+function Movements(){
 
     const dataSource = [
         {
@@ -53,7 +52,7 @@ function Sales(){
 
     return (
 
-        <Card title="Vendas e Orçamentos">
+        <Card title="Fluxo de Caixa">
             <Button type="primary" icon={<PlusOutlined />}>Novo Pedido</Button>
             <Table dataSource={dataSource} columns={columns} />
 
@@ -62,4 +61,4 @@ function Sales(){
     )
 }
 
-export default Sales;
+export default Movements;

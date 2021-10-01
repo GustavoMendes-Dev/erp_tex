@@ -2,40 +2,42 @@ import React from 'react';
 import { Statistic, Card, Col, Row } from 'antd';
 import { ArrowUpOutlined, ArrowDownOutlined } from '@ant-design/icons';
 
+import HeaderTop from '../components/header';
+
 
 function Dashboard(){
+
+    const { Meta } = Card;
 
     return (
 
        <React.Fragment>
-             <div className="site-statistic-demo-card">
-    <Row gutter={16}>
-      <Col span={12}>
-        <Card>
-          <Statistic
-            title="Active"
-            value={11.28}
-            precision={2}
-            valueStyle={{ color: '#3f8600' }}
-            prefix={"R$"}
-            // suffix="%"
-          />
-        </Card>
-      </Col>
-      <Col span={12}>
-        <Card>
-          <Statistic
-            title="Idle"
-            value={9.3}
-            precision={2}
-            valueStyle={{ color: '#cf1322' }}
-            prefix={<ArrowDownOutlined />}
-            suffix="%"
-          />
-        </Card>
-      </Col>
-    </Row>
-  </div>
+          <HeaderTop/>
+            <h1>Boa noite, Gustavo.</h1>
+            <div className="site-card-wrapper">
+            <Row gutter={16}>
+              <Col span={6}>
+                <Card title="Total de Vendas" extra={232}>
+                  <Meta title="R$ 19.099,09" description={<a href="/financeiro/vendas-e-orcamentos">Ver mais</a>} />
+                </Card>
+              </Col>
+              <Col span={6}>
+                <Card title="Total de Orçamentos" bordered={false}>
+                  Card content
+                </Card>
+              </Col>
+              <Col span={6}>
+                <Card title="Contas à Receber" bordered={false}>
+                  Card content
+                </Card>
+              </Col>
+              <Col span={6}>
+                <Card title="Contas à Pagar" bordered={false}>
+                  Card content
+                </Card>
+              </Col>
+            </Row>
+          </div>
        </React.Fragment>
 
     )

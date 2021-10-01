@@ -1,7 +1,11 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import { Card, Table, Button } from 'antd';
-// import { Button } from "react-bootstrap"
+import { Link } from "react-router-dom";
 import { PlusOutlined } from '@ant-design/icons';
+
+import HeaderTop from '../../../components/header';
+import NavSecondary from '../../../components/navSecondary';
 
 
 function Products(){
@@ -53,11 +57,22 @@ function Products(){
 
     return (
 
-        <Card title="Produtos">
-            <Button type="primary" icon={<PlusOutlined />}>Novo Pedido</Button>
-            <Table dataSource={dataSource} columns={columns} />
+        <React.Fragment>
 
-      </Card>
+        <HeaderTop/> 
+
+        <NavSecondary>
+          <Link to="/sales">Produtos</Link>
+          <Link to="/notas">Categorias</Link>
+        </NavSecondary>
+
+          <Container>
+            <Card title="Produtos">
+                <Button type="primary" icon={<PlusOutlined />}>Novo Pedido</Button>
+                <Table dataSource={dataSource} columns={columns} />
+            </Card>
+          </Container>
+        </React.Fragment>
 
     )
 }

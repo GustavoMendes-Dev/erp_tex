@@ -1,0 +1,10 @@
+.success {
+    background: #3bba6e;
+    border-color: #3bba6e;
+    margin-bottom: 20px;
+}
+
+.success:hover, .success:focus, .success:active {
+    background-color: #36aa65;
+    border-color: #36aa65;
+}
