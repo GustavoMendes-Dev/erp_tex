@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react'
+import { Button } from 'react-bootstrap';
 
 import './btn.css'
 
-
-function Btn(props) {
+function Btn({...props}) {
 
     return (
-        <div className="btn_tx">
-           <a className="btn_tx_a" href={props.link}>{props.children}</a>
-        </div>
+        <Button type="submit" className={props.className}>
+            {props.title}
+        </Button>
     )
 }
 

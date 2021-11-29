@@ -267,7 +267,6 @@ function Sales(){
       ];
 
     return (
-
       <React.Fragment>
         <HeaderTop/> 
 
@@ -275,51 +274,38 @@ function Sales(){
           <Link className="active" to="/sales">Vendas e Orçamentos</Link>
           <Link to="/notas">Notas Fiscais</Link>
         </NavSecondary>
-        
-
           <Container>
-
-          <Breadcrumb>
-            <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-            <Breadcrumb.Item href="https://getbootstrap.com/docs/4.0/components/breadcrumb/">
-              Library
-            </Breadcrumb.Item>
-            <Breadcrumb.Item>Data</Breadcrumb.Item>
-          </Breadcrumb>
-          
-          <Card title="Vendas e Orçamentos">
-          <Space>
-          <NewSale/>
-            <ButtonP type="primary" icon={<PlusOutlined />} className="secondary" >Novo Orçamento</ButtonP>
-            <RangePicker />
-            <Search placeholder="input search text" onSearch={onSearch} style={{ width: 200 }} />
-          </Space>
-          
-          <Row gutter={16} justify="center">
-            <Col span={6}>
-            <Card>
-              <Statistic title="Cancelados" value={112893} />
-              </Card>
-            </Col>
-            <Col span={6}>
-            <Card>
-              <Statistic title="Orçamentos" value={112893} precision={2} />
-              </Card>
-            </Col>
-            <Col span={6}>
-            <Card>
-              <Statistic title="Vendas" value={112893} precision={2} />
-              </Card>
-            </Col>
-            <Col span={6}>
-            <Card>
-              <Statistic title="Previsão" value={112893} precision={2} />
-              </Card>
-            </Col>
-          </Row>
-            <Table dataSource={dataSource} columns={columns} />
-
-      </Card>
+            <Card title="Vendas e Orçamentos">
+              <Space>
+              <NewSale/>
+                <ButtonP type="primary" icon={<PlusOutlined />} className="secondary" >Novo Orçamento</ButtonP>
+                <RangePicker />
+                <Search placeholder="input search text" onSearch={onSearch} style={{ width: 200 }} />
+              </Space>
+            {/* <Row gutter={16} justify="center">
+              <Col span={6}>
+              <Card>
+                <Statistic title="Cancelados" value={112893} />
+                </Card>
+              </Col>
+              <Col span={6}>
+              <Card>
+                <Statistic title="Orçamentos" value={112893} precision={2} />
+                </Card>
+              </Col>
+              <Col span={6}>
+              <Card>
+                <Statistic title="Vendas" value={112893} precision={2} />
+                </Card>
+              </Col>
+              <Col span={6}>
+              <Card>
+                <Statistic title="Previsão" value={112893} precision={2} />
+                </Card>
+              </Col>
+            </Row> */}
+              <Table dataSource={dataSource} columns={columns} />
+            </Card>
           </Container>
       </React.Fragment>
 

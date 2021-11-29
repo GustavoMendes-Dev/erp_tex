@@ -1,3 +1,7 @@
-body {
-    /* background-color: #00affa; */
+.main__login {
+    background-color: #00affa;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
 }

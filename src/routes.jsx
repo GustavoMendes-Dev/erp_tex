@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, BrowserRouter as Routers, Switch, Redirect } from "react-router-dom";
 
-import Login from './views/login'; // Página de Login.
+import Login from './views/Login'; // Página de Login.
 import Forgot from './views/forgot-pass'; // Página de Recuperação de senha.
 
 import Error404 from './views/Layout/pages/error404'
